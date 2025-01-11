@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "Hash": "1oIS1JTRkJlJ1O9FEEqy9sP2wFTZARXAVVJkawg/vYw=",
+  "Source": "projectWebApi",
+  "BasePath": "_content/projectWebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "projectWebApi\\wwwroot",
+      "Source": "projectWebApi",
+      "ContentRoot": "C:\\Users\\user1\\Desktop\\webApi\\projectWebApi\\wwwroot\\",
+      "BasePath": "_content/projectWebApi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\user1\\Desktop\\webApi\\projectWebApi\\wwwroot\\css\\site.css",
+      "SourceId": "projectWebApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user1\\Desktop\\webApi\\projectWebApi\\wwwroot\\",
+      "BasePath": "_content/projectWebApi",
+      "RelativePath": "css/site.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\user1\\Desktop\\webApi\\projectWebApi\\wwwroot\\index.html",
+      "SourceId": "projectWebApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user1\\Desktop\\webApi\\projectWebApi\\wwwroot\\",
+      "BasePath": "_content/projectWebApi",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\user1\\Desktop\\webApi\\projectWebApi\\wwwroot\\js\\site.js",
+      "SourceId": "projectWebApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user1\\Desktop\\webApi\\projectWebApi\\wwwroot\\",
+      "BasePath": "_content/projectWebApi",
+      "RelativePath": "js/site.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\site.js"
+    }
+  ]
+}
