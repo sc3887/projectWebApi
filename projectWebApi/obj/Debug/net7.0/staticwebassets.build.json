@@ -1,27 +1,27 @@
 {
   "Version": 1,
-  "Hash": "1oIS1JTRkJlJ1O9FEEqy9sP2wFTZARXAVVJkawg/vYw=",
-  "Source": "projectWebApi",
-  "BasePath": "_content/projectWebApi",
+  "Hash": "/mQg3aTTzSKn1OQJHiwts+Gq5MLFEkz50801D+t6YNQ=",
+  "Source": "Core",
+  "BasePath": "_content/Core",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "projectWebApi\\wwwroot",
-      "Source": "projectWebApi",
-      "ContentRoot": "C:\\Users\\user1\\Desktop\\webApi\\projectWebApi\\wwwroot\\",
-      "BasePath": "_content/projectWebApi",
+      "Name": "Core\\wwwroot",
+      "Source": "Core",
+      "ContentRoot": "C:\\Users\\user1\\Desktop\\תכנות\\יד\\Core\\projectWebApi1\\wwwroot\\",
+      "BasePath": "_content/Core",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\user1\\Desktop\\webApi\\projectWebApi\\wwwroot\\css\\site.css",
-      "SourceId": "projectWebApi",
+      "Identity": "C:\\Users\\user1\\Desktop\\תכנות\\יד\\Core\\projectWebApi1\\wwwroot\\css\\site.css",
+      "SourceId": "Core",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user1\\Desktop\\webApi\\projectWebApi\\wwwroot\\",
-      "BasePath": "_content/projectWebApi",
+      "ContentRoot": "C:\\Users\\user1\\Desktop\\תכנות\\יד\\Core\\projectWebApi1\\wwwroot\\",
+      "BasePath": "_content/Core",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -34,11 +34,11 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\user1\\Desktop\\webApi\\projectWebApi\\wwwroot\\index.html",
-      "SourceId": "projectWebApi",
+      "Identity": "C:\\Users\\user1\\Desktop\\תכנות\\יד\\Core\\projectWebApi1\\wwwroot\\index.html",
+      "SourceId": "Core",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user1\\Desktop\\webApi\\projectWebApi\\wwwroot\\",
-      "BasePath": "_content/projectWebApi",
+      "ContentRoot": "C:\\Users\\user1\\Desktop\\תכנות\\יד\\Core\\projectWebApi1\\wwwroot\\",
+      "BasePath": "_content/Core",
       "RelativePath": "index.html",
       "AssetKind": "All",
       "AssetMode": "All",
@@ -51,11 +51,11 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Users\\user1\\Desktop\\webApi\\projectWebApi\\wwwroot\\js\\site.js",
-      "SourceId": "projectWebApi",
+      "Identity": "C:\\Users\\user1\\Desktop\\תכנות\\יד\\Core\\projectWebApi1\\wwwroot\\js\\site.js",
+      "SourceId": "Core",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user1\\Desktop\\webApi\\projectWebApi\\wwwroot\\",
-      "BasePath": "_content/projectWebApi",
+      "ContentRoot": "C:\\Users\\user1\\Desktop\\תכנות\\יד\\Core\\projectWebApi1\\wwwroot\\",
+      "BasePath": "_content/Core",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
       "AssetMode": "All",

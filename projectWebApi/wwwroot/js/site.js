@@ -1,5 +1,3 @@
-
-
 const uri = '/iceCream';
 let iceCreams = [];
 
@@ -169,4 +167,3 @@ function displayAddItem() {
 function closeAddItem() {
     document.getElementById('addItemForm').style.display = 'none';
 }
-

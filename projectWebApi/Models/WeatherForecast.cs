@@ -1,4 +1,4 @@
-namespace projectWebApi;
+namespace Core;
 
 public class WeatherForecast
 {

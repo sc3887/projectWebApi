@@ -474,11 +474,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user1\\Desktop\\webApi\\projectWebApi\\projectWebApi.csproj",
-      "projectName": "projectWebApi",
-      "projectPath": "C:\\Users\\user1\\Desktop\\webApi\\projectWebApi\\projectWebApi.csproj",
+      "projectUniqueName": "C:\\Users\\user1\\Desktop\\תכנות\\יד\\Core\\projectWebApi1\\Core.csproj",
+      "projectName": "Core",
+      "projectPath": "C:\\Users\\user1\\Desktop\\תכנות\\יד\\Core\\projectWebApi1\\Core.csproj",
       "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user1\\Desktop\\webApi\\projectWebApi\\obj\\",
+      "outputPath": "C:\\Users\\user1\\Desktop\\תכנות\\יד\\Core\\projectWebApi1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user1\\AppData\\Roaming\\NuGet\\NuGet.Config",
