@@ -1,8 +1,4 @@
-#addItemForm {
-    display: none;
-}
-
-nput[type='submit'],
+input[type='submit'],
 button,
 [aria-label] {
     cursor: pointer;
