@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login.css">
+    <title>דף לוגין</title>
+</head>
+<body>
+    <div id="overlay" class="overlay">
+        <div class="message-box">
+            <p id="current-message"></p>
+            <button id="close-message" class="close-button">✖</button>
+        </div>
+    </div>
+    <div class="login-container">
+        <h2>כניסת משתמש</h2>
+        <form id="loginForm">
+            <label for="userName">שם משתמש:</label>
+            <input type="text" id="userName" name="userName" required>
+            <label for="password">סיסמה:</label>
+            <input type="password" id="password" name="password" required>
+            <button onclick="login(event)">התחברות</button>
+        </form>
+    </div>
+    <script src="./js/login.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('./image/גלידות2.jpg'); /* הכנס את הנתיב לתמונה שלך */
+    background-size: cover; /* מסדר את התמונה כך שתכסה את כל הרקע */
+    background-position: center; /* ממקם את התמונה במרכז */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 96vh; /* גובה העמוד */
+}
+
+h1 {
+    text-align: center;
+    font-size: 6em; /* גודל כותרת גדול יותר */
+    font-weight: normal; /* לעשות את הטקסט דק יותר */
+    background: linear-gradient(90deg, pink, orange); /* מעבר צבעים ורוד וכתום */
+    -webkit-background-clip: text; /* חותך את הרקע של הטקסט */
+    -webkit-text-fill-color: transparent; /* ממלא את הצבע של הטקסט בשקוף */
+    margin-top: -40px;
+    margin-bottom: 40px; /* רווח בין הכותרת לכפתורים */
+    padding: 10px; /* רווח פנימי סביב הטקסט */
+    background-color: rgba(255, 255, 255, 0.2); /* רקע לבן שקוף */
+    border-radius: 5px; /* פינות מעוגלות */
+    text-shadow: 6px 6px 12px rgba(255, 165, 0, 0.8); /* הוספת צל כתום עבה יותר */
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button {
+    background: linear-gradient(90deg, pink, orange); /* מעבר צבעים ורוד וכתום */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px; /* גודל טקסט גדול יותר */
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none; /* ביטול המסגרת */
+    border-radius: 4px;
+    transition: opacity 0.3s; /* שינוי שקיפות */
+}
+
+.button:hover {
+    opacity: 0.9; /* שינוי שקיפות כשעוברים עם העכבר */
+}

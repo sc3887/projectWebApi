@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ניהול משתמשים</title>
+    <link rel="stylesheet" href="./css/user.css">
+</head>
+<body>
+    <button class="back-button" onclick="goBackToMenu()">חזרה לתפריט הקודם</button>
+    <br><br><br>
+    <button class="exist" onclick="logOut()">
+        יציאה
+    </button>
+
+    <h1>פרטי משתמש</h1>
+    <div>
+        <table id="adminUserDetailsTable">
+            <tr>
+                <th>:שם משתמש</th>
+                <th>:סיסמא</th>
+                <th></th>
+            </tr>
+            <tbody id="detailsUser"></tbody>
+        </table>
+    </div>
+
+    <div id="editForm">
+        <h3>ערוך</h3>
+        <form action="javascript:void(0);" onsubmit="updateUser()">
+            <input type="hidden" id="edit-id">
+            <input type="text" id="edit-name" placeholder="שם משתמש">
+            <input type="text" id="edit-password" placeholder="סיסמא">
+            <input type="text" id="edit-email" placeholder="כתובת מייל">
+            <input type="text" id="edit-type" placeholder="משרה">
+            <input type="submit" value="save" onclick="closeInput()">
+            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
+    <button onclick="displayAddItem()">הוסף משתמש חדש</button>
+
+    <p id="counter"></p>
+    <h1>:רשימת המשתמשים</h1>
+    <div id="addItemForm" style="display: none;">
+        <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+            <input type="hidden" id="user-id"><br>
+            <input type="text" id="user-name" placeholder="שם משתמש"><br>
+            <input type="text" id="user-password" placeholder="סיסמא"><br>
+            <input type="text" id="user-email" placeholder="כתובת מייל"><br>
+            <input type="text" id="user-type" placeholder="משרה"><br>
+            <input type="submit" value="Add" onclick="closeInput()">
+        </form>
+    </div>
+    
+    <table id="allUsersTable"> <!-- הוספת מזהה לטבלה של כל המשתמשים -->
+        <tr>
+            <th>שם</th>
+            <th>סיסמא</th>
+            <th>אימייל</th>
+            <th>משרה</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tbody id="users"></tbody>
+    </table>
+
+    <div class="message" id="message"></div>
+
+    <script src="js/admin.js"></script>
+    <script type="text/javascript">
+        checkAuthorize();
+    </script>
+    <script src="./js/login.js"></script>
+</body>
+</html>

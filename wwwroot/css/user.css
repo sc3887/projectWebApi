@@ -1,0 +1,147 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* פונט עדכני יותר */
+    background-image: url('./image/גלידות8.webp'); /* הוסף כאן את כתובת התמונה שלך */
+    background-size: 100%; /* מכסה את כל הרקע */
+    background-position: center; /* מיקום התמונה במרכז */
+    color: #fff; /* צבע טקסט לבן */
+    display: flex; /* שימוש ב-Flexbox */
+    flex-direction: column; /* סידור עמודה */
+    align-items: center; /* ממרכז את האלמנטים */
+    padding: 20px; /* רווח פנימי */
+    direction: rtl; /* מימין לשמאל */
+}
+
+h1 {
+    color: #ffcc00; /* צבע צהוב */
+    margin-bottom: 20px; /* רווח מתחת לכותרת */
+}
+
+.back-button {
+    position: absolute; /* מיקום מוחלט */
+    top: 60px; /* מרחק מהחלק העליון */
+    right: 10px; /* מרחק מהצד הימני */
+    background: linear-gradient(45deg, rgba(255, 105, 180, 0.8), rgba(255, 165, 0, 0.8)); /* מעברים בגווני ורוד וכתום */
+    color: white; /* צבע טקסט לבן */
+    border: none; /* ללא גבול */
+    border-radius: 5px; /* פינות מעוגלות */
+    padding: 5px 10px; /* גובה ורוחב קטן יותר */
+    cursor: pointer; /* מחוון עכבר */
+}
+
+.back-button:hover {
+    background: linear-gradient(45deg, rgba(255, 20, 147, 0.8), rgba(255, 140, 0, 0.8)); /* גוון כהה בעת ריחוף */
+}
+
+
+
+.exist {
+    position: absolute; /* מיקום מוחלט */
+    top: 20px; /* מרחק מהחלק העליון */
+    right: 10px; /* מרחק מהצד הימני */
+    background: linear-gradient(45deg, rgba(255, 105, 180, 0.8), rgba(255, 165, 0, 0.8)); /* מעברים בגווני ורוד וכתום */
+    color: white; /* צבע טקסט לבן */
+    border: none; /* ללא גבול */
+    border-radius: 5px; /* פינות מעוגלות */
+    padding: 5px 10px; /* גובה ורוחב קטן יותר */
+    cursor: pointer; /* מחוון עכבר */
+}
+
+.exist:hover {
+    background: linear-gradient(45deg, rgba(255, 20, 147, 0.8), rgba(255, 140, 0, 0.8)); /* גוון כהה בעת ריחוף */
+}
+
+#editForm {
+    display: none; /* הטופס סגור בהתחלה */
+    background: rgba(255, 255, 255, 0.9); /* רקע לבן שקוף */
+    padding: 20px; /* רווח פנימי */
+    border-radius: 5px; /* פינות מעוגלות */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* צל */
+    width: 300px; /* רוחב קבוע */
+    margin-bottom: 20px; /* רווח תחתון */
+}
+
+input[type='text'],
+input[type='number'],
+input[type='checkbox'] {
+    width: calc(100% - 20px); /* כדי להשאיר רווח */
+    padding: 10px; /* רווח פנימי */
+    margin-bottom: 10px; /* רווח תחתון */
+    border: 1px solid #ccc; /* גבול אפור */
+    border-radius: 5px; /* פינות מעוגלות */
+}
+
+input[type='submit'],
+button {
+    width: auto; /* רוחב אוטומטי */
+    padding: 10px; /* רווח פנימי */
+    background: linear-gradient(45deg, rgba(255, 165, 0, 0.8), rgba(255, 105, 180, 0.8)); /* מעברים בגווני ורוד וכתום */
+    color: white; /* צבע טקסט לבן */
+    border: none; /* ללא גבול */
+    border-radius: 5px; /* פינות מעוגלות */
+    cursor: pointer; /* מחוון עכבר */
+    margin-bottom: 30px; /* רווח גדול יותר בין הכפתור לטבלה */
+}
+
+input[type='submit']:hover,
+button:hover {
+    background: linear-gradient(45deg, rgba(255, 140, 0, 0.8), rgba(255, 20, 147, 0.8)); /* גוון כהה בעת ריחוף */
+}
+
+#userDetailsTable,
+#adminUserDetailsTable {
+    display: flex; /* הופך את הטבלה ל-flexbox */
+    flex-direction: column; /* סידור עמודה */
+    width: 100%; /* רוחב מלא */
+    margin-top: 20px; /* רווח עליון */
+    background: rgba(255, 255, 255, 0.1); /* רקע לבן שקוף */
+    padding: 10px; /* רווח פנימי */
+    border: none; /* מבטל גבול */
+    border-radius: 5px; /* פינות מעוגלות */
+}
+
+#userDetailsTable div,
+#adminUserDetailsTable div {
+    margin-bottom: 10px; /* רווח בין השורות */
+    color: #ffcc00; /* צבע צהוב */
+}
+
+#userDetailsTable h2,
+#adminUserDetailsTable h2 {
+    font-size: 24px; /* גודל טקסט גדול יותר */
+    font-weight: bold; /* עובי טקסט */
+    background: linear-gradient(45deg, rgba(255, 105, 180, 1), rgba(255, 165, 0, 1)); /* מעבר צבעים */
+    -webkit-background-clip: text; /* חיתוך רקע לטקסט */
+    -webkit-text-fill-color: transparent; /* מילוי טקסט שקוף */
+}
+
+table {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* פונט עדכני יותר */
+    border-collapse: collapse; /* איחוד גבולות */
+    width: 100%; /* רוחב מלא */
+    margin-top: 20px; /* רווח עליון */
+}
+
+th, td {
+    padding: 10px; /* רווח פנימי */
+    text-align: right; /* טקסט מימין */
+    color: #ffcc00; /* צבע צהוב */
+    border-right: 1px solid rgba(255, 255, 255, 0.3); /* גבול בין העמודות */
+}
+
+th:last-child, td:last-child {
+    border-right: none; /* אין גבול בעמודה האחרונה */
+}
+
+#allUsersTable {
+    border: 1px solid #ffcc00; /* גבול צהוב סביב הטבלה */
+    border-radius: 5px; /* פינות מעוגלות */
+    background: rgba(255, 255, 255, 0.2); /* רקע בהיר שקוף לטבלה */
+}
+
+#allUsersTable th {
+    background-color: rgba(255, 165, 0, 0.8); /* רקע כתום בהיר לכותרות */
+}
+
+#allUsersTable td {
+    background-color: rgba(255, 255, 255, 0.1); /* רקע לבן שקוף לתאים */
+}

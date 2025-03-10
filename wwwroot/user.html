@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ניהול משתמשים</title>
+    <link rel="stylesheet" href="./css/user.css">
+</head>
+<body>
+    <button class="back-button" onclick="goBackToMenu()">חזרה לתפריט הקודם</button>
+    <!-- <br><br><br> -->
+    <button class="exist" onclick="logOut()">
+        יציאה
+    </button>
+    <h1>פרטי משתמש</h1>
+    <div>
+        <table id="userDetailsTable"> <!-- הוספת מזהה לטבלה -->
+            <tr>
+                <th>:שם משתמש</th>
+                <th>:סיסמא</th>
+                <th></th>
+            </tr>
+            <tbody id="users"></tbody>
+        </table>
+    </div>
+
+    <div id="editForm">
+        <h3>ערוך</h3>
+        <form action="javascript:void(0);" onsubmit="updateUser()">
+            <input type="hidden" id="edit-id">
+            <input type="text" id="edit-name">
+            <input type="text" id="edit-password">
+            <input type="submit" value="save" onclick="closeInput()">
+            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
+
+    <div class="message" id="message"></div>
+
+    <script src="js/user.js"></script>
+    <script type="text/javascript">
+        checkAuthorize();
+    </script>
+    <script src="./js/login.js"></script>
+</body>
+</html>

@@ -1,8 +1,42 @@
-const uri = '/iceCream';
+// const uriIceCream = 'http://localhost:5291/iceCream';
+const uriIceCream = '/iceCream';
+
 let iceCreams = [];
 
+function goBackToMenu() {
+    location.href = "../routing.html"; 
+}
+
+
+function checkAuthorize(){
+    fetch(uriIceCream, {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem("token")}`
+        }
+    })
+    .then(response => response.json())
+    .then(r => console.log(r))
+    .then(getItems)
+    .catch(error => {
+        sessionStorage.setItem("check", error);
+        console.log(error);
+        location.href = "../login.html"
+    })
+}
+
 function getItems() {
-    fetch(uri)
+    // const userId = localStorage.getItem("userId");
+    fetch(uriIceCream, {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem("token")}`
+        }
+    })
     .then(response => response.json())
     .then(data => displayItems(data))
     .catch(error => console.error('Unable to get items.', error));
@@ -23,11 +57,12 @@ function addItem() {
         milky: iceMilky.checked
     }
 
-    fetch(uri, {
+    fetch(uriIceCream, {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem("token")}`
         },
         body: JSON.stringify(newItem)
     }) 
@@ -39,8 +74,8 @@ function addItem() {
         iceExtras.checked = false;
         iceMilky.checked = false;
         closeAddItem();
-    })  
-    
+    })
+    .then(showMessage("המוצר נוסף לרשימת המוצרים שלך בהצלחה."))
 }
 
 function _displayCount(itemCount) {
@@ -123,16 +158,18 @@ function updateItem() {
         extras: document.getElementById('edit-extras').checked,
         milky: document.getElementById('edit-milky').checked,
     };
-
-    fetch(`${uri}/${itemId}`, {
+    // fetch(`${uriIceCream}/${itemId}`, {
+    fetch(`${uriIceCream}/${item.id}`, {
             method: 'PUT',
             headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem("token")}`
             },
             body: JSON.stringify(item)
         })
         .then(() => getItems())
+        .then(showMessage("עדכון המוצר הסתיים בהצלחה."))
         .catch(error => console.error('Unable to update item.', error));
 
     closeInput();
@@ -143,20 +180,26 @@ function updateItem() {
 function deleteItem(itemId) {
     const item = iceCreams.find(item => item.id === itemId);
 
-    fetch(`${uri}/${itemId}`, {
+    fetch(`${uriIceCream}/${itemId}`, {
         method: 'DELETE',
         headers: {
             'Accept': 'application/json',
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${localStorage.getItem("token")}`
         },
         body: JSON.stringify(item)
     })
     .then(() => getItems())
+    .then(showMessage("המוצר הוסר מרשימת המוצרים שלך בהצלחה."))
     .catch(error => console.error('Unable to update item.', error));
 }
 
 function closeInput() {
     document.getElementById('editForm').style.display = 'none';
+}
+
+function closeAdd() {
+    document.getElementById('addItemForm').style.display = 'none';
 }
 
 function displayAddItem() {
@@ -166,3 +209,18 @@ function displayAddItem() {
 function closeAddItem() {
     document.getElementById('addItemForm').style.display = 'none';
 }
+// //////////////////////////////
+// הצגת ההודעה
+function showMessage(message) {
+    document.getElementById('current-message').innerText  = message;
+    document.getElementById('overlay').style.display = 'flex';
+    }
+    
+    // הסתרת ההודעה
+    function closeMessage() {
+    document.getElementById('overlay').style.display = 'none';
+    }
+    
+    // הוספת מאזין לאירוע כפתור סגירה
+    document.getElementById('close-message').addEventListener('click', closeMessage);
+    

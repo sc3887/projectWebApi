@@ -1,0 +1,107 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('./image/גלידות.webp');  /* כאן הכנס את הנתיב לתמונה שלך */
+    background-size: cover; /* מסדר את התמונה כך שתכסה את כל הרקע */
+    background-position: center; /* ממקם את התמונה במרכז */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3em; /* גודל כותרת גדול יותר */
+    background: linear-gradient(90deg, pink, orange); /* מעבר צבעים ורוד וכתום */
+    -webkit-background-clip: text; /* חותך את הרקע של הטקסט */
+    -webkit-text-fill-color: transparent; /* ממלא את הצבע של הטקסט בשקוף */
+}
+
+.login-container {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: rgba(255, 105, 180, 1); /* צבע ורוד */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none; /* ביטול המסגרת */
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.5); /* רקע חצי שקוף ל-input */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(90deg, pink, orange); /* מעבר צבעים ורוד וכתום */
+    color: white;
+    border: none; /* ביטול המסגרת */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9; /* שינוי שקיפות כשעוברים עם העכבר */
+}
+
+/* //////////////////// */
+/* הכיסוי השקוף שמכסה את שאר המסך */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* צבע שחור עם שקיפות */
+    display: none; /* מוסתר כברירת מחדל */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* מציב את האלמנט מעל כל שאר התוכן */
+    }
+    
+    /* עיצוב עבור תיבת ההודעה */
+    .message-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    }
+    
+    /* עיצוב עבור כפתור סגירה */
+    .close-button {
+    position: absolute;
+        top: 10px;
+    right: 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+        border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    }
+    
+    /* עיצוב עבור הטקסט בהודעה */
+    .message-box p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    }

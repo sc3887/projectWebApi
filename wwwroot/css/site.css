@@ -1,29 +1,200 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('./image/גלידות7.webp'); /* הוסף כאן את כתובת התמונה שלך */
+    background-size: 90%;
+    background-position: center;
+    color: #fff; /* צבע טקסט לבן */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: relative; /* כדי למקם את הכפתור של החזרה */
+    direction: rtl; /* מימין לשמאל */
+}
+
+h1 {
+    color: #ff69b4; /* צבע ורוד כתמתם */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(135, 206, 250, 0.7); /* צל תכלת בהיר */
+    font-size: 3em; /* גודל כותרת גדול יותר */
+    background: linear-gradient(90deg, pink, orange); /* מעבר צבעים ורוד וכתום */
+    -webkit-background-clip: text; /* חותך את הרקע של הטקסט */
+
+}
+
+h3 {
+    color: #ffcc00; /* צבע צהוב */
+    text-align: center;
+    font-size: 2em; /* גודל כותרת גדול יותר */
+}
+
+.back-button {
+    position: absolute; /* מיקום מוחלט */
+    top: 60px; /* מרחק מהחלק העליון */
+    right: 10px; /* מרחק מהצד הימני */
+    background: linear-gradient(45deg, rgba(255, 105, 180, 0.8), rgba(255, 165, 0, 0.8)); /* מעברים בגווני ורוד וכתום */
+    color: white; /* צבע טקסט לבן */
+    border: none; /* ללא גבול */
+    border-radius: 5px; /* פינות מעוגלות */
+    padding: 5px 10px; /* גובה ורוחב קטן יותר */
+    cursor: pointer; /* מחוון עכבר */
+}
+
+.back-button:hover {
+    background: linear-gradient(45deg, rgba(255, 20, 147, 0.8), rgba(255, 140, 0, 0.8)); /* גוון כהה בעת ריחוף */
+}
+
+
+
+.exist {
+    position: absolute; /* מיקום מוחלט */
+    top: 10px; /* מרחק מהחלק העליון */
+    right: 10px; /* מרחק מהצד הימני */
+    background: linear-gradient(45deg, rgba(255, 105, 180, 0.8), rgba(255, 165, 0, 0.8)); /* מעברים בגווני ורוד וכתום */
+    color: white; /* צבע טקסט לבן */
+    border: none; /* ללא גבול */
+    border-radius: 5px; /* פינות מעוגלות */
+    padding: 5px 10px; /* גובה ורוחב קטן יותר */
+    cursor: pointer; /* מחוון עכבר */
+}
+
+.exist:hover {
+    background: linear-gradient(45deg, rgba(255, 20, 147, 0.8), rgba(255, 140, 0, 0.8)); /* גוון כהה בעת ריחוף */
+}
+
+.add-icecream-button {
+    background: linear-gradient(45deg, rgba(255, 165, 0, 0.8), rgba(255, 105, 180, 0.8)); /* מעברים בגווני ורוד וכתום */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px; /* גובה ורוחב מותאמים */
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.add-icecream-button:hover {
+    background: linear-gradient(45deg, rgba(255, 140, 0, 0.8), rgba(255, 20, 147, 0.8)); /* גוון כהה בעת ריחוף */
+}
+
+#addItemForm, #editForm {
+    display: none; /* טפסים סגורים בהתחלה */
+    background: rgba(255, 255, 255, 0.9); /* רקע לבן שקוף */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+input[type='text'],
+input[type='number'],
+input[type='checkbox'] {
+    width: calc(100% - 20px); /* כדי להשאיר רווח */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 input[type='submit'],
-button,
-[aria-label] {
+button {
+    width: auto; /* רוחב אוטומטי */
+    padding: 10px;
+    background: linear-gradient(45deg, rgba(255, 165, 0, 0.8), rgba(255, 105, 180, 0.8)); /* מעברים בגווני ורוד וכתום */
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-#editForm {
-    display: none;
+input[type='submit']:hover,
+button:hover {
+    background: linear-gradient(45deg, rgba(255, 140, 0, 0.8), rgba(255, 20, 147, 0.8)); /* גוון כהה בעת ריחוף */
 }
 
 table {
     font-family: Arial, sans-serif;
-    border: 1px solid;
+    border: 1px solid #ccc;
     border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.5); /* רקע לבן שקוף */
+}
+th, td {
+    padding: 10px; /* רווח פנימי */
+    text-align: right; /* טקסט מימין */
+    color: rgba(255, 20, 147, 0.8); /* צבע צהוב לכותרות */
+    font-size: 18px; /* גודל טקסט גדול יותר */
+    font-weight: bold; /* טקסט בולט */
 }
 
 th {
-    background-color: #f8f8f8;
-    padding: 5px;
+    background: linear-gradient(45deg, rgba(255, 105, 180, 1), rgba(255, 165, 0, 1)); /* שילוב של ורוד וכתום */
+    color: #ffcc00; /* צבע טקסט צהוב */
+    font-size: 18px; /* גודל טקסט גדול יותר */
+    font-weight: bold; /* טקסט בולט */
 }
+
 
 td {
-    border: 1px solid;
-    padding: 5px;
+    border: 1px solid #ccc; /* גבול אפור */
+    background-color: rgba(255, 255, 255, 0.1); /* רקע לבן שקוף לתאים */
 }
 
-#addItemForm{
-    display: none;
+
+#counter {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #ffcc00; /* צבע צהוב */
 }
+/* //////////////////// */
+/* הכיסוי השקוף שמכסה את שאר המסך */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* צבע שחור עם שקיפות */
+    display: none; /* מוסתר כברירת מחדל */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* מציב את האלמנט מעל כל שאר התוכן */
+    }
+    
+    /* עיצוב עבור תיבת ההודעה */
+    .message-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    }
+    
+    /* עיצוב עבור כפתור סגירה */
+    .close-button {
+    position: absolute;
+        top: 10px;
+    right: 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+        border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    }
+    
+    /* עיצוב עבור הטקסט בהודעה */
+    .message-box p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    }
