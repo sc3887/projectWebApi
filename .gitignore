@@ -1,4 +1,3 @@
 *.dll
 /bin
-*.cs
 /obj
